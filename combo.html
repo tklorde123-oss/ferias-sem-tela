@@ -11,6 +11,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fraunces:opsz,wght@9..144,800&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1176444368263800');
+fbq('track', 'PageView');
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href*="pay.cakto.com.br"]');
+  if(!a)return;
+  var v=a.getAttribute('data-valor')||'19.90';
+  fbq('track','InitiateCheckout',{value:parseFloat(v),currency:'BRL'});
+});
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1176444368263800&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <div class="bar">Combo de férias: os 2 kits de <s>R$ 99,98</s> por <b>R$ 30,99</b></div>
@@ -27,7 +50,7 @@
     <p class="lead">O Pote do Tédio e O Pote do Dia de Chuva juntos. Cartões pra imprimir, recortar e sortear num pote, com o que você já tem em casa.</p>
     <div class="price"><span class="from">de <s>R$ 99,98</s></span><span class="now">R$ 30,99</span><span class="tag">os 2 kits</span></div>
     <p class="small" style="margin-bottom:18px">pagamento único · separados, os 2 sairiam R$ 39,80 na promoção</p>
-    <a class="btn" href="https://pay.cakto.com.br/urwafkb_1376239">Quero o combo</a>
+    <a class="btn" href="https://pay.cakto.com.br/urwafkb_1376239" data-valor="30.99">Quero o combo</a>
     <p class="btn-note">Pix ou cartão · acesso por e-mail logo após a confirmação</p>
   </div>
   <div class="pic"><img src="img/pote-mesa.jpg" alt="Pote de cartões de brincadeira sobre a mesa" loading="eager"></div>
@@ -96,7 +119,7 @@
     </ul>
     <div class="price"><span class="from">de <s>R$ 99,98</s></span><span class="now">R$ 30,99</span></div>
     <p class="small" style="margin-bottom:18px">pagamento único · R$ 8,81 a menos que comprar os 2 separados</p>
-    <a class="btn block" href="https://pay.cakto.com.br/urwafkb_1376239">Quero o combo</a>
+    <a class="btn block" href="https://pay.cakto.com.br/urwafkb_1376239" data-valor="30.99">Quero o combo</a>
     <p class="btn-note">Compra segura pela Cakto · 7 dias de garantia</p>
   </div>
 </div></section>
@@ -115,6 +138,6 @@
   <p style="margin-top:6px">Produto digital. Pagamento processado pela Cakto.</p>
 </div></footer>
 
-<div class="sticky"><div class="p"><small>os 2 kits por</small>R$ 30,99</div><a class="btn" href="https://pay.cakto.com.br/urwafkb_1376239">Quero o combo</a></div>
+<div class="sticky"><div class="p"><small>os 2 kits por</small>R$ 30,99</div><a class="btn" href="https://pay.cakto.com.br/urwafkb_1376239" data-valor="30.99">Quero o combo</a></div>
 </body>
 </html>
