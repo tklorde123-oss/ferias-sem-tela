@@ -116,7 +116,18 @@ footer a{color:var(--soft)}
 @media (max-width:820px){
   body{font-size:16px}
   .hero .grid,.two{grid-template-columns:1fr;gap:24px}
-  .hero .pic{order:-1;aspect-ratio:1/1}
+  .hero{padding:4px 0 32px}
+  .hero .grid{gap:16px}
+  .hero .pic{order:-1;aspect-ratio:2/1;border-radius:16px}
+  .hero .pic img{object-position:50% 35%}
+  .hero .kicker{display:none}
+  .hero h1{font-size:36px}
+  .hero .quote{font-size:28px;margin:0 0 8px}
+  .hero p.lead{font-size:16px;margin-bottom:12px}
+  .hero .price .now{font-size:38px}
+  .hero .grid > div > .small{display:none}
+  .hero .btn{display:block;width:100%}
+  header.top{padding:10px 0}
   .steps,.colors{grid-template-columns:1fr 1fr}
   .cards-ex,.prods{grid-template-columns:1fr}
   header.top nav{display:none}
